@@ -10,8 +10,27 @@ const flashcards = [
 
 const termElement = document.getElementById("term");
 const definitionElement = document.getElementById("definition");
-const showDefinitionBtn = document.getElementById("show-definition-button");
-const nextCardBtn = document.getElementById("next-card-button");
+const showDefinitionButton = document.getElementById("show-definition-button");
+const nextCardButton = document.getElementById("next-card-button");
 const flashcard = document.querySelector(".flashcard");
 
 let currentCardIndex = 0;
+showFront();
+
+showDefinitionButton.addEventListener("click", showBack);
+nextCardButton.addEventListener("click", nextCard);
+
+function showFront() {
+  flashcard.style.transform = "rotateY(0deg)";
+  termElement.textContent = flashcards[currentCardIndex].term;
+}
+
+function showBack() {
+  flashcard.style.transform = "rotateY(180deg)";
+  definitionElement.textContent = flashcards[currentCardIndex].definition;
+}
+
+function nextCard() {
+  currentCardIndex = (currentCardIndex + 1) % flashcards.length;
+  showFront();
+}
