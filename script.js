@@ -140,6 +140,7 @@ const showDefinitionBtn = document.getElementById("show-definition-button");
 const nextCardBtn = document.getElementById("next-card-button");
 const randomOrderCheckbox = document.getElementById("random-order-checkbox");
 const flashcard = document.querySelector(".flashcard");
+const backButton = document.getElementById("back-button");
 
 let currentCardIndex = 0;
 let shuffledIndices = [...Array(flashcards.length).keys()]; // Create an array of indices to shuffle
@@ -150,6 +151,7 @@ showFront();
 showDefinitionBtn.addEventListener("click", showBack);
 nextCardBtn.addEventListener("click", nextCard);
 randomOrderCheckbox.addEventListener("change", toggleRandomOrder);
+backButton.addEventListener("click", goBack);
 
 function showFront() {
   flashcard.style.transform = "rotateY(0deg)";

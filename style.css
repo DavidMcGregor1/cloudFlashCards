@@ -77,6 +77,17 @@ header {
     margin-top: 15%;
 }
 
+#next-card-button:hover {
+    background-color: #04c59e;
+    cursor: pointer;
+}
+#show-definition-button:hover {
+    background-color: #04c59e;
+    cursor: pointer;
+}
+
+
+
 #term {
     font-size: 2rem;
 }
