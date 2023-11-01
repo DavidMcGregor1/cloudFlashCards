@@ -38,3 +38,29 @@ function nextCard() {
   currentCardIndex = (currentCardIndex + 1) % flashcards.length;
   showFront();
 }
+
+function toggleRandomOrder() {
+  isRandomOrder = randomOrderCheckbox.checked;
+  randomOrderCheckbox.disabled = true; // Disable the checkbox while shuffling
+
+  if (isRandomOrder) {
+    shuffledIndices = shuffleArray([...Array(flashcards.length).keys()]);
+  } else {
+    shuffledIndices = [...Array(flashcards.length).keys()];
+  }
+
+  currentCardIndex = 0;
+  showFront();
+
+  setTimeout(() => {
+    randomOrderCheckbox.disabled = false;
+  }, 500);
+}
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
