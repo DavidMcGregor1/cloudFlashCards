@@ -1,5 +1,9 @@
 const flashcards = [
-  { term: "test0", definition: "test0 def" },
+  {
+    term: "CloudWatch",
+    definition:
+      "A monitoring service provided by AWS. It allows us to collect, store and analyse a large amount of data related to the performance and health of our AWS resources. It provides us with useful metrics that we can use to monitor and troubleshoot our resources.",
+  },
   { term: "test1", definition: "test1 def" },
   { term: "test2", definition: "test2 def" },
   { term: "test3", definition: "test3 def" },
