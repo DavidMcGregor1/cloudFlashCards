@@ -156,6 +156,7 @@ backButton.addEventListener("click", goBack);
 function showFront() {
   flashcard.style.transform = "rotateY(0deg)";
   termElement.textContent = flashcards[shuffledIndices[currentCardIndex]].term;
+  updateBackButtonState();
 }
 
 function showBack() {
@@ -187,6 +188,17 @@ function toggleRandomOrder() {
   setTimeout(() => {
     randomOrderCheckbox.disabled = false;
   }, 500);
+}
+
+function goBack() {
+  if (currentCardIndex > 0) {
+    currentCardIndex--;
+    showFront();
+  }
+}
+
+function updateBackButtonState() {
+  backButton.disabled = currentCardIndex === 0;
 }
 
 function shuffleArray(array) {
