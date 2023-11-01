@@ -124,14 +124,6 @@ const flashcards = [
     definition:
       "Wiz is a cloud security platform that we use to help minimise risk. It involves vulnerability detection that we use to scan our cloud configurations to identify vulnerabilities and risks. ",
   },
-  {
-    term: "ECS",
-    definition: "",
-  },
-  {
-    term: "ECS",
-    definition: "",
-  },
 ];
 
 const termElement = document.getElementById("term");
