@@ -208,3 +208,22 @@ function shuffleArray(array) {
   }
   return array;
 }
+
+// ---------- MORE INFO ---------
+
+var popupButton = document.getElementById("more-info-button");
+var popup = document.getElementById("popup-id");
+
+popupButton.addEventListener("click", function () {
+  if (popup.style.display === "block") {
+    popup.style.display = "none";
+  } else {
+    popup.style.display = "block";
+  }
+});
+
+document.addEventListener("click", function (event) {
+  if (event.target !== popupButton && event.target !== popup) {
+    popup.style.display = "none";
+  }
+});
