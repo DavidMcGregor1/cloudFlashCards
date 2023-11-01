@@ -165,12 +165,16 @@ header {
 
   @media screen and (max-width: 600px) {
  
+    #cloud-terms-header {
+        font-size: 20px;
+    }
+
     .card-front {
         color: white;
     }
 
     .flashcard-container {
-        margin-top: 15%;
+        margin-top: 10%;
         perspective: 1000px;
         display: flex;
         justify-content: center;
@@ -179,7 +183,7 @@ header {
 
     .flashcard {
         width: 300px;
-        height: 500px;
+        height: 400px;
         transform-style: preserve-3d;
         transition: transform 0.5s;
     }
