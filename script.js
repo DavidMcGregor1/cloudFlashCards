@@ -22,6 +22,7 @@ showFront();
 
 showDefinitionButton.addEventListener("click", showBack);
 nextCardButton.addEventListener("click", nextCard);
+randomOrderCheckbox.addEventListener("change", toggleRandomOrder);
 
 function showFront() {
   flashcard.style.transform = "rotateY(0deg)";
