@@ -8,22 +8,29 @@
     <title>Cloud Flash Cards</title>
 </head>
 <body>
-    <div class="flashcard-container">
-        <div class="flashcard">
-            <div class="card-front">
-                <p id="term"></p>
-                <button id="show-definition-button">Show Definition</button>
+    <header>
+        <h1 id="cloud-terms-header">Cloud Terms</h1>
+    </header>
+    <main>
+        <div class="flashcard-container">
+            <div class="flashcard">
+                <div class="card-front">
+                    <p id="term"></p>
+                    <button id="show-definition-button">Show Definition</button>
+                </div>
+                <div class="card-back">
+                    <p id="definition"></p>
+                    <button id="next-card-button">Next Card</button>
+                </div>
             </div>
-            <div class="card-back">
-                <p id="definition"></p>
-                <button id="next-card-button">Next Card</button>
-            </div>
+            
         </div>
         <div class="random-container">
             <input type="checkbox" id="random-order-checkbox">
                 <label for="random-order-checkbox">Random Order 
         </div>
-    </div>
+    </main>
+    
 <script src="script.js"></script>    
 </body>
 </html>

@@ -1,23 +1,36 @@
 /* ---------- MAIN ---------- */
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    
     margin: 0;
+    background-color: #FFFFFF;
+    height: 100vh;
+
+}
+
+
+
+#cloud-terms-header {
+    text-align: center;
+}
+
+header {
+    align-items: center;
+    margin-bottom: 10%;
+
 }
 
 /* ---------- FLASH CARD ---------- */
 
 .flashcard-container {
     perspective: 1000px;
+    display: flex;
+    justify-content: center;
 }
 
 .flashcard {
     width: 500px;
     height: 300px;
-    background-color: orange;
     transform-style: preserve-3d;
     transition: transform 0.5s;
 }
@@ -34,12 +47,32 @@ body {
 }
 
 .card-front {
-    background-color: #2196F3;
+    background-color: #1C1A5E;
     color: white;
 }
 
 .card-back {
-    background-color: #4CAF50;
+    background-color: #1C1A5E;
     color: white;
     transform: rotateY(180deg);
+}
+
+#next-card-button, #show-definition-button {
+    height: 40px;
+    width: 150px;
+    background-color: #01DEB2;
+    border-radius: 40px;
+    border: none;
+    margin-top: 15%;
+}
+
+#term {
+}
+
+/* ---------- RANDOM ---------- */
+
+
+.random-container {
+    text-align: center;
+    margin-top: 2%;
 }
