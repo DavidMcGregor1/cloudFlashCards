@@ -13,8 +13,11 @@ const definitionElement = document.getElementById("definition");
 const showDefinitionButton = document.getElementById("show-definition-button");
 const nextCardButton = document.getElementById("next-card-button");
 const flashcard = document.querySelector(".flashcard");
+const randomOrderCheckbox = document.getElementById("random-order-checkbox");
 
 let currentCardIndex = 0;
+let shuffledIndices = [...Array(flashcards.length).keys()]; // Create an array of indices to shuffle
+let isRandomOrder = false;
 showFront();
 
 showDefinitionButton.addEventListener("click", showBack);
