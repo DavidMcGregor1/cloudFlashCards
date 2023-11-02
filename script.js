@@ -1,3 +1,5 @@
+// ---------- FLASH CARDS ---------
+
 const flashcards = [
   {
     term: "AmazonMQ",
@@ -144,6 +146,8 @@ showDefinitionBtn.addEventListener("click", showBack);
 nextCardBtn.addEventListener("click", nextCard);
 randomOrderCheckbox.addEventListener("change", toggleRandomOrder);
 backButton.addEventListener("click", goBack);
+
+// ---------- MAIN FUNCTIONS ---------
 
 function showFront() {
   flashcard.style.transform = "rotateY(0deg)";
